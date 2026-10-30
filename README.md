@@ -96,5 +96,8 @@ On your PC, where Emberville keeps it. The server holds the world.
 ### What happens when Emberville updates?
 Players and the server must run the same EmberNet version. After a game update the app updates itself and the mod, and says so if a server you saved runs a different version.
 
+### What if EmberNet closes to update and does not open again?
+Download `EmberNetSetup-latest.exe` from the [latest release](https://github.com/HumanGenome/EmberNet/releases/latest) and run it once. Your saved servers and settings are kept. Versions before 0.2.3 could not update themselves when the Windows user folder's name had an accented letter, `!` or `%` in it.
+
 ### Is this official?
 No. EmberNet is an independent, fan-made project. It is not made by or affiliated with Cygnus Cross.

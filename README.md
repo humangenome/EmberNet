@@ -12,13 +12,13 @@
 
 # EmberNet
 
-Emberville has no multiplayer and no dedicated server. The game is single-player only, and its world exists on one player's PC. EmberNet adds Emberville online co-op through an Emberville dedicated server: [EmberNetServer](https://github.com/HumanGenome/EmberNetServer) runs the game headless on a Windows machine with a public IP and port, and the EmberNet app connects players to it by address.
+Emberville has no multiplayer. EmberNet adds online co-op on an Emberville dedicated server, for up to 16 players.
 
-Every player must install EmberNet to join an EmberNet server. Stock Emberville cannot connect to one.
+Every player needs the EmberNet app to join.
 
 ## Features
 
-### 🤝 Co-op in the same world
+### 🤝 Online co-op
 Everyone plays the same world: the same monsters, bosses, chests, doors, levers, quests and story. A monster one player hits is hurt for everyone, and a door one player opens is open for everyone. When the party leaves a map it travels together, and story scenes wait for every player.
 
 <p align="center">
@@ -26,7 +26,7 @@ Everyone plays the same world: the same monsters, bosses, chests, doors, levers,
 </p>
 
 ### 🧭 Join by IP
-Add the server's `ip:port` in the app and click Join. The app installs the mod, starts Emberville and joins with the character you picked. You can also type the address in the game's MULTIPLAYER menu. Before you join, the app shows whether the server is up, who is on it and which version it runs.
+Add the server's `ip:port` in the app and click Join. The app installs the mod, starts Emberville and joins with the character you picked. You can also type the IP and port in the game's MULTIPLAYER menu. Before you join, the app shows whether the server is up, who is on it and which version it runs.
 
 <p align="center">
   <img src="docs/img/app-servers.png" alt="The EmberNet app's server list: each server's status, map, ping, players and version, with Join" width="860">
@@ -40,7 +40,7 @@ Characters are Emberville's own saves on your PC, the same ones single-player us
 </p>
 
 ### 👥 Up to 16 players
-A server takes 4 players unless its owner raises the limit. Everyone sees the other players with their own look and name.
+A server takes 4 players until its owner raises the limit, up to 16. Everyone sees the other players with their own look and name.
 
 <p align="center">
   <img src="docs/img/players.png" alt="Four players on one EmberNet server, each with their own look and name" width="860">
@@ -63,29 +63,21 @@ Press **Enter** in game to chat with the party.
 ## Install
 
 ### Rent a server
-[SurvivalServers.com Emberville server hosting](https://www.survivalservers.com/services/game_servers/emberville/?utm_source=github&utm_medium=readme_install&utm_campaign=embernet) comes with EmberNet installed and kept up to date, the port open, and a control panel.
+[SurvivalServers.com](https://www.survivalservers.com/services/game_servers/emberville/?utm_source=github&utm_medium=readme_install&utm_campaign=embernet) runs Emberville servers with EmberNet installed.
 
 ### Players
 1. Download `EmberNetSetup-latest.exe` from the [latest release](https://github.com/HumanGenome/EmberNet/releases/latest/download/EmberNetSetup-latest.exe).
-2. Run it. One install per PC. The app updates itself from then on.
-3. Open EmberNet, add the server address, pick a character, click Join.
+2. Run it. If Windows shows "Windows protected your PC", click More info, then Run anyway. The app updates itself after that.
+3. Open EmberNet, add the server's IP and port with +, pick a character and click Join.
 
-### Self-hosted servers
-Requirements, the settings file, ports and admin commands are in [EmberNetServer](https://github.com/HumanGenome/EmberNetServer). You need a Windows machine and Emberville's game files on it from your own Steam copy; the server package ships no part of the game.
+### Host your own
+You need a Windows PC and the Emberville game files from your own Steam copy. The setup steps are in [EmberNetServer](https://github.com/HumanGenome/EmberNetServer).
 
 ## Releases
 
-This repo publishes the player side: `EmberNetSetup-<version>.exe`, an `EmberNetSetup-latest.exe` alias, and the release notes. The server package is on the [EmberNetServer release page](https://github.com/HumanGenome/EmberNetServer/releases/latest), and the changelog for both sides is [EmberNetServer's CHANGELOG.md](https://github.com/HumanGenome/EmberNetServer/blob/main/CHANGELOG.md).
-
-## Source
-
-- **EmberNet** (this repo): the app players install, the downloads and the documentation.
-- **[EmberNetServer](https://github.com/HumanGenome/EmberNetServer)**: the server package hosts run next to Emberville's game files.
+Each release here has the app installer, `EmberNetSetup-<version>.exe`, and the same file as `EmberNetSetup-latest.exe`. The server download is on the [EmberNetServer releases page](https://github.com/HumanGenome/EmberNetServer/releases/latest). What changed in each version is in [CHANGELOG.md](https://github.com/HumanGenome/EmberNetServer/blob/main/CHANGELOG.md).
 
 ## FAQ
-
-### Does everyone need EmberNet?
-Yes. Emberville has no multiplayer of its own, so every player in the party needs the mod. The app installs it once per PC.
 
 ### Does it change my game?
 Single-player is unchanged. EmberNet adds `winhttp.dll` and a `BepInEx` folder next to `Emberville.exe`, and Steam keeps updating the game as normal. **Remove from Emberville** in the app's Settings takes them out (the loader stays only if another mod uses it).
@@ -94,10 +86,11 @@ Single-player is unchanged. EmberNet adds `winhttp.dll` and a `BepInEx` folder n
 On your PC, where Emberville keeps it. The server holds the world.
 
 ### What happens when Emberville updates?
-Players and the server must run the same EmberNet version. After a game update the app updates itself and the mod, and says so if a server you saved runs a different version.
+A game update can stop joins until a new EmberNet release is out. The app updates itself when it starts. Players and the server need the same network version. The app and the server say so when they differ.
 
-### What if EmberNet closes to update and does not open again?
-Download `EmberNetSetup-latest.exe` from the [latest release](https://github.com/HumanGenome/EmberNet/releases/latest) and run it once. Your saved servers and settings are kept. Versions before 0.2.3 could not update themselves when the Windows user folder's name had an accented letter, `!` or `%` in it.
+### What if EmberNet closes to update and doesn't open again?
+Download `EmberNetSetup-latest.exe` from the [latest release](https://github.com/HumanGenome/EmberNet/releases/latest) and run it once. Your saved servers and settings are kept. Versions before 0.2.3 couldn't update themselves when the Windows user folder's name had an accented letter, `!` or `%` in it.
 
-### Is this official?
-No. EmberNet is an independent, fan-made project. It is not made by or affiliated with Cygnus Cross.
+---
+
+EmberNet is a free, unofficial fan-made project. It's not made by or affiliated with Cygnus Cross.

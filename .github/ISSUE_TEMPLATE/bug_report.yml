@@ -5,9 +5,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for filing a bug. Please make sure this is about EmberNet itself, not your hosting provider's control panel, billing or support.
+        This form is for bugs in EmberNet. For your host's control panel, billing or support, contact your host.
 
-        If the problem is with a running **server** (it will not start, the world does not save, the server query does not answer), file it on [EmberNetServer](https://github.com/HumanGenome/EmberNetServer/issues) instead.
+        If a **server** won't start, doesn't save the world or doesn't show in the server list, report it on [EmberNetServer](https://github.com/HumanGenome/EmberNetServer/issues) instead.
 
   - type: input
     id: embernet-version
@@ -35,7 +35,7 @@ body:
       label: What kind of server were you connecting to?
       options:
         - A server I host myself
-        - A managed/rented server
+        - A rented server
         - A friend's server
         - Not applicable
     validations:
@@ -68,7 +68,7 @@ body:
     attributes:
       label: Logs
       description: |
-        Paste or attach the relevant log excerpts. The app writes its log next to its own settings; the release notes for your version say where.
+        Paste or attach the lines from the app's log. Settings > Open log folder opens it.
       render: text
 
   - type: checkboxes

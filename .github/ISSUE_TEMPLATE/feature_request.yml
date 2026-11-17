@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Feature requests for the **server** side (admin tools, world management, server query) belong on [EmberNetServer](https://github.com/HumanGenome/EmberNetServer/issues).
+        Ideas for the **server** (admin tools, worlds, the server list) go on [EmberNetServer](https://github.com/HumanGenome/EmberNetServer/issues).
 
   - type: textarea
     id: usecase

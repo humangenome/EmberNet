@@ -70,6 +70,8 @@ Press **Enter** in game to chat with the party.
 2. Run it. If Windows shows "Windows protected your PC", click More info, then Run anyway. The app updates itself after that.
 3. Open EmberNet, add the server's IP and port with +, pick a character and click Join.
 
+If Windows says Smart App Control blocked the installer, wait a day or two for Windows to recognize the new version and run it again, or turn Smart App Control off in Windows Security under App & browser control.
+
 ### Host your own
 You need a Windows PC and the Emberville game files from your own Steam copy. The setup steps are in [EmberNetServer](https://github.com/HumanGenome/EmberNetServer).
 
